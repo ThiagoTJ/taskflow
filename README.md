@@ -29,5 +29,5 @@ Dashboard moderno de gerenciamento de tarefas, feitas com React + Vite + Tailwin
 ### 1. Clone o repositório
 
 ```bash
-git clone
+git clone https://github.com/ThiagoTJ/taskflow
 cd taskflow
