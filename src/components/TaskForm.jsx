@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export function TaskForm() {
+export function TaskForm({ onAdd }) {
   const [title, setTitle] = useState('')
 
   function handleSubmit(e) {
