@@ -17,7 +17,7 @@ Dashboard moderno de gerenciamento de tarefas, feitas com React + Vite + Tailwin
 
 ## Estrutura do projeto
 
-```bash
+```
 src/
 ├── components/    # Componentes reutilizáveis
 ├── context/       # Contexto de autenticação
@@ -36,6 +36,13 @@ git clone https://github.com/ThiagoTJ/taskflow
 cd taskflow
 npm install
 npm run dev
+```
+
+## Para testar:
+
+```bash
+Email: admin@taskflow.com
+Senha: 123456
 ```
 
 ## Etapas
@@ -63,12 +70,21 @@ npm run dev
 
 **Objetivo: Garantir que apenas usuários logados acessem área privadas da aplicação**
 
-## Para testar:
+### Etapa 4 - Dashboard com tarefas e CRUD local
 
-```bash
-Email: admin@taskflow.com
-Senha: 123456
+* Criar a página **Dashboard.jsx**
+* Simular uma lista de tarefas (mock)
+* Exibir nome do usuário logado
+* Adicionar botão de logout
+* Aplicar layout com responsividade usando **TailwindCSS**
+
+```
+src/
+├── components/
+│   └── TaskList.jsx        # Componente de lista de tarefas
+├── pages/
+│   └── Dashboard.jsx       # Página principal após login
 ```
 
 ## Etapas seguintes
-* Etapa 4 - Dashboard com tarefas e CRUD local
+* Etapa 5 - Integração com API (mock)
