@@ -53,6 +53,16 @@ npm run dev
 * Navegação automática após login bem-sucedido
 * Estilização responsiva com Tailwind
 
+### Etapa 3 - Rotas privadas protegidas por autenticação
+
+* Criado o componente de rota **PrivateRoute** que protege páginas de acesso restrito
+* O componente verifica se o usuário está logado por meio do **isAuthenticated** do **AuthContext**
+* Caso o usuário *não esteja autenticado*, é redirecionado automaticamente para a página de login **(/login)**
+* A rota principal **(/)** foi protegida com o **PrivateRoute**
+* Refatorado o AuthContext para incluir **isAuthenticated** de forma derivada com base no estado **user**
+
+**Objetivo: Garantir que apenas usuários logados acessem área privadas da aplicação
+
 ## Para testar:
 
 ```bash
@@ -61,4 +71,4 @@ Senha: 123456
 ```
 
 ## Etapas seguintes
-* Etapa 3 - Rotas privadas protegidas por autenticação
+* Etapa 4 - 
