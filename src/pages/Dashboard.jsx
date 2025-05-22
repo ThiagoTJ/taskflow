@@ -1,8 +1,15 @@
+import { useState } from 'react'
 import { useAuth } from '../context/AuthContext'
 import { TaskList } from '../components/TaskList'
+import { TaskForm } from '../components/Taskform'
 
 export function Dashboard() {
   const { user, logout } = useAuth()
+  const [tasks, setTasks] = useState([])
+
+  function addTask() {
+    setTasks((prev) => [newTask, ...prev])
+  }
 
   return (
     <div className="min-h-screen bg-gray-50 p-6">
@@ -17,7 +24,8 @@ export function Dashboard() {
           </button>
         </div>
         <h2 className="text-lg font-semibold mb-2">Minhas Tarefas</h2>
-        <TaskList />
+        <TaskForm onAdd={addTask} />
+        <TaskList tasks={tasks} />
       </div>
     </div>
   )

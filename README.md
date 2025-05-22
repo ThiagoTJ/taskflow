@@ -86,5 +86,21 @@ src/
 │   └── Dashboard.jsx       # Página principal após login
 ```
 
+### Etapa 5 - Integração com API (mock)
+
+* Adicionar um formulário para criar novas tarefas
+* integrar com o **TaskList** para exibir tarefas criadas
+* Usar **useState** e **useEffect** para controle local
+* Simular um sistema de tarefas por sessão (sem backend)
+
+```
+src/
+├── components/
+│   ├── TaskForm.jsx     # Novo: formulário de criação
+│   └── TaskList.jsx     # Atualizar para usar props
+├── pages/
+│   └── Dashboard.jsx    # Gerenciar lista e passar props
+```
+
 ## Etapas seguintes
-* Etapa 5 - Integração com API (mock)
+* Etapa 6 — Testes com Jest e RTL
