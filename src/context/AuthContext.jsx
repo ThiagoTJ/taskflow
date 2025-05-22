@@ -1,19 +1,19 @@
-import { createContext, useState } from 'react'
+import { createContext, useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-export const AuthContext = createContext();
+const AuthContext = createContext()
 
-export function AuthProvider({children}) {
-  const [user, setUser] = useState(null);
-  const navigate = useNavigate();
+export function AuthProvider({ children }) {
+  const [user, setUser] = useState(null)
+  const navigate = useNavigate()
 
   function login({ email, password }) {
-    if(email === 'admin@taskflow.com' && password === '123456') {
-      const fakeUser = { name: 'Admin', email}
+    if (email === 'admin@taskflow.com' && password === '123456') {
+      const fakeUser = { name: 'Admin', email }
       setUser(fakeUser)
       navigate('/')
     } else {
-      alert('Credenciais inválidas');
+      alert('Credenciais inválidas')
     }
   }
 
@@ -22,9 +22,13 @@ export function AuthProvider({children}) {
     navigate('/login')
   }
 
+  const isAuthenticated = !!user
+
   return (
-    <AuthContext.Provider value={{ user, login, logout }}>
+    <AuthContext.Provider value={{ user, login, logout, isAuthenticated }}>
       {children}
     </AuthContext.Provider>
   )
 }
+
+export const useAuth = () => useContext(AuthContext)
