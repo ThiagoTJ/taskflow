@@ -1,8 +1,8 @@
-import { useState, useContext } from 'react'
-import { AuthContext } from '../context/AuthContext'
+import { useState } from 'react'
+import { useAuth } from '../context/AuthContext'
 
 export function Login() {
-  const { login } = useContext(AuthContext)
+  const { login } = useAuth()
   const [form, setForm] = useState({ email: '', password: '' })
 
   function handleChange(e) {

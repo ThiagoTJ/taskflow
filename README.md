@@ -44,7 +44,7 @@ npm run dev
 * Projeto criado com **Vite** + **React**
 * Estilização com **TailwindCSS**
 * Configuração de **ESLint** e **Prettier**
-* **React Router** com rotas básocas
+* **React Router** com rotas básicas
 
 ### Etapa 2 - Autenticação Simulada
 
