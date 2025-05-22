@@ -61,7 +61,7 @@ npm run dev
 * A rota principal **(/)** foi protegida com o **PrivateRoute**
 * Refatorado o AuthContext para incluir **isAuthenticated** de forma derivada com base no estado **user**
 
-**Objetivo: Garantir que apenas usuários logados acessem área privadas da aplicação
+**Objetivo: Garantir que apenas usuários logados acessem área privadas da aplicação**
 
 ## Para testar:
 
@@ -71,4 +71,4 @@ Senha: 123456
 ```
 
 ## Etapas seguintes
-* Etapa 4 - 
+* Etapa 4 - Dashboard com tarefas e CRUD local
