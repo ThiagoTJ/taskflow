@@ -7,7 +7,7 @@ export function Dashboard() {
   const { user, logout } = useAuth()
   const [tasks, setTasks] = useState([])
 
-  function addTask() {
+  function addTask(newTask) {
     setTasks((prev) => [newTask, ...prev])
   }
 
