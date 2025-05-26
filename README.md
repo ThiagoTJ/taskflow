@@ -108,5 +108,15 @@ src/
 │   └── Dashboard.jsx    # Gerenciar lista e passar props
 ```
 
+## Etapa 6 — Testes com Jest e RTL
+
+* Configurar o ambiente de testes com Jest + RTL
+* Escrever testes para os principais componentes
+  * **TaskForm**
+  * **TaskList**
+  * **Dashboard** (testes básicos de integração)
+* Simular interações do usuário
+* Garantir que os principais fluxos estão funcionando corretamente
+
 ## Etapas seguintes
-* Etapa 6 — Testes com Jest e RTL
+* Etapa 7 — 
