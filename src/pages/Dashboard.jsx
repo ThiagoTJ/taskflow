@@ -11,6 +11,16 @@ export function Dashboard() {
     setTasks((prev) => [newTask, ...prev])
   }
 
+  function toggleTaskDone(id) {
+    const taskDone = tasks.map((task) => {
+      if (task.id === id) {
+        return {...task, done: !task.done}
+      }
+      return task
+    })
+    setTasks(taskDone)
+  }
+
   return (
     <div className="min-h-screen bg-gray-50 p-6">
       <div className="max-w-xl mx-auto bg-white p-6 rounded-xl shadow">
@@ -25,7 +35,7 @@ export function Dashboard() {
         </div>
         <h2 className="text-lg font-semibold mb-2">Minhas Tarefas</h2>
         <TaskForm onAdd={addTask} />
-        <TaskList tasks={tasks} />
+        <TaskList tasks={tasks} onToggle={toggleTaskDone} />
       </div>
     </div>
   )

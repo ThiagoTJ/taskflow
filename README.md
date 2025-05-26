@@ -92,6 +92,9 @@ src/
 * integrar com o **TaskList** para exibir tarefas criadas
 * Usar **useState** e **useEffect** para controle local
 * Simular um sistema de tarefas por sessão (sem backend)
+* Permitir ao usuário marcar/desmarcar tarefas como concluídas
+* Aplicar estilo visual diferenciado para tarefas finalizadas
+* Manter o estado atualizado sem recarregar a página
 
 ```
 src/
