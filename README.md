@@ -95,6 +95,9 @@ src/
 * Permitir ao usuário marcar/desmarcar tarefas como concluídas
 * Aplicar estilo visual diferenciado para tarefas finalizadas
 * Manter o estado atualizado sem recarregar a página
+* Salvar as tarefas no **localStorage**
+* Carregar tarefas salvas ao abrir a aplicação
+* Atualizar **localStorage** sempre que as tarefas mudarem
 
 ```
 src/

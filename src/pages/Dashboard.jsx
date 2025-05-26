@@ -1,11 +1,20 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useAuth } from '../context/AuthContext'
 import { TaskList } from '../components/TaskList'
 import { TaskForm } from '../components/Taskform'
 
 export function Dashboard() {
   const { user, logout } = useAuth()
-  const [tasks, setTasks] = useState([])
+  const [tasks, setTasks] = useState(updateState)
+
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks))
+  }, [tasks])
+
+  function updateState() {
+    const saved = localStorage.getItem("tasks")
+    return saved ? JSON.parse(saved) : []
+  }
 
   function addTask(newTask) {
     setTasks((prev) => [newTask, ...prev])
@@ -14,7 +23,7 @@ export function Dashboard() {
   function toggleTaskDone(id) {
     const taskDone = tasks.map((task) => {
       if (task.id === id) {
-        return {...task, done: !task.done}
+        return { ...task, done: !task.done }
       }
       return task
     })
